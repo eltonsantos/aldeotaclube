@@ -17,9 +17,16 @@ from django.contrib import admin
 from django.urls import path, include
 from home import urls as home_urls
 from noticias import urls as noticias_urls
+from atletas import urls as atletas_urls
+from artilharia import urls as artilharia_urls
+from .views import sobre, contato
 
 urlpatterns = [
     path('', include(home_urls)),
+    path('sobre/', sobre, name='sobre'),
     path('noticias/', include(noticias_urls)),
+    path('atletas/', include(atletas_urls)),
+    path('artilharia/', include(artilharia_urls)),
+    path('contato/', contato, name='contato'),
     path('admin/', admin.site.urls),
 ]
