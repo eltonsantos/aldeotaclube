@@ -1,0 +1,72 @@
+/*
+azul: 0A469E
+azul escuro: 06367e
+*/
+
+body.home {background-image: linear-gradient(to bottom, white, #06367e); background-position:0 0;}
+header{
+  /*background:#0A469E url('../images/bg_header.png') top center no-repeat;*/
+  background-color: #0093DD;
+  border-bottom:5px solid #ACACAC;
+}
+
+hr{  border-bottom: 1px dashed #B9C7DC;}
+
+.title-placar{background:#0093DD;}
+.proximo-jogo,.jogo-anterior{border:2px solid #0A469E;}
+.placar-jogo{color:#06367e;}
+
+a{color:#06367e;}
+a:hover{color:#05285C;}
+
+#noticias,#elenco_home{background:#edefff;}
+#patrocinio{ background:#edefff;}
+#patrocinio h4{color:#06367e;  border-top:1px solid #06367e;}
+
+.owlnext,.owlprev{ color:#AABEDC;}
+.owlnext:hover,.owlprev:hover{ color:#06367e;}
+
+footer{background:#0093DD; border-top:4px solid #ACACAC; }
+
+/*Páginas internas*/
+body.interna{background: #edefff;}
+#interna{background: #edefff;}
+#interna h1, h1.right-line{color:#06367e;}
+
+.right-line:after {
+  background-color: #06367E;
+}
+
+/*Fim Páginas internas*/
+
+/*o clube*/
+h4.subcategoria{color:#0A469E;}
+
+/*noticias*/
+.item_noticia{border-bottom: 1px dashed #B9C7DC;}
+
+/*Elenco*/
+.subtitulo{background:#B9C7DC;}
+
+/*artilharia*/
+.tabela-heading, .tabela_custom { border: 1px solid #B9C7DC;}
+.tabela-heading { background-color: #B9C7DC;}
+
+/*contato*/
+#contact  .submit  input[type="submit"] {
+  background: #5987CC;
+}
+#contact  .submit  input[type="submit"]:hover {
+  background: #06367e;
+}
+#contact textarea, #contact .form-control{border: 1px solid #96A8C2;}
+
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-toggle{background:#0A469E;}
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {background-color: #06367e;}
+  .navbar-default{background-color: #06367e;}
+
+  	.navbar-default .navbar-nav > li > a{border-bottom:1px dotted #0A469E;}
+}
