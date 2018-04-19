@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} Contato - Aldeota Clube | Melhor time de futebol amador de Fortaleza/CE {% endblock %}
+
+{% block main %}
+<div class="col-md-8">
+    <div class="row">
+        <div class="col-md-12">
+                <form action="#">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Enviar">
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="row">
+                    <div class="col-sm-6 col-md-12">
+                        <h4 class="title-placar">Próximo jogo</h4>
+                        <div class="proximo-jogo">
+                            <p>&nbsp;</p>
+                            <br>
+                            <p class="text-center">Não há jogo agendado até o momento.</p>
+                            <p>&nbsp;</p>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-12">
+                        <h4 class="title-placar">Jogo anterior</h4>
+                        <div class="jogo-anterior">
+                            <div class="placar-jogo">
+                                <span class="t-mandante"><img width="50" height="50" src="/static/images/aldeotaclube.jpg"></span>
+                                <span class="destaque-placar">
+                                    <small>2</small>
+                                    <small class="inv">x</small>
+                                    <small class="gols-visitante">1</small>
+                                </span>
+                                <span class="t-visitante"><img src="http://fut7.net/temachelsea/assets/uploads/equipe/thumb_9281c4709604b218d45a0d088b85e2c0.png" title="Borussia Dortmund"></span>
+                            </div>
+                            <div class="info-jogo-placar">
+                                <b>28/03/2015</b> às 13:00hs - Liga dos Campeões 2015
+                                <br>
+                                Stamford Bridge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block noticias %}{% endblock %}
+
+{% block elenco %}{% endblock %}

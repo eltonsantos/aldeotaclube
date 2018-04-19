@@ -3,7 +3,11 @@ azul: 0A469E
 azul escuro: 06367e
 */
 
-body.home {background-image: linear-gradient(to bottom, white, #06367e); background-position:0 0;}
+body.home {
+  /*background-image: linear-gradient(to bottom, white, #06367e);*/
+  background-position:0 0;
+}
+
 header{
   /*background:#0A469E url('../images/bg_header.png') top center no-repeat;*/
   background-color: #0093DD;
