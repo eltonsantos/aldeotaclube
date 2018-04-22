@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load bootstrap %}
+
 {% block title %} Contato - Aldeota Clube | Melhor time de futebol amador de Fortaleza/CE {% endblock %}
 
 {% block main %}
@@ -12,8 +14,8 @@
             <div class="info-generic">
                 <form action="#">
                     {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" value="Enviar">
+                    {{ form|bootstrap }}
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
         </div><!-- .row -->

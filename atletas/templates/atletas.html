@@ -2,29 +2,5 @@
 
 {% block title %} Atletas - Aldeota Clube | Melhor time de futebol amador de Fortaleza/CE {% endblock %}
 
-{% block main %}
-<section id="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading text-uppercase">Atletas</h2>
-            </div>
-            {% for atleta in atletas %}
-            <div class="info-noticia">
-                <span>
-                    <div class="info-title">
-                        {{ atleta.nome }}{{ atleta.sobrenome }}</div><br />
-                    <p class="info-data"><i class="fa fa-calendar"></i>&nbsp;{{ atleta.data_nascimento }}</p>
-                </span>
-                <div class="info-blog">
-                    {{ atleta.descricao }}
-                </div>
-                <div class="clear-noticias"></div>
-            </div>
-            {% endfor %}
-        </div><!-- .row -->
-    </div>
-</section>
-{% endblock %}
 
 {% block atletas %}{% endblock %}

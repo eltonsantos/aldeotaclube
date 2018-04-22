@@ -2,29 +2,4 @@
 
 {% block title %} Jogos - Aldeota Clube | Melhor time de futebol amador de Fortaleza/CE {% endblock %}
 
-{% block main %}
-<section id="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="section-heading text-uppercase">Jogos</h2>
-            </div>
-            {% for jogo in jogos %}
-            <div class="info-noticia">
-                <span>
-                    <div class="info-title">
-                        Aldeota Clube x {{ jogo.adversario }}</div><br />
-                    <p class="info-data"><i class="fa fa-calendar"></i>&nbsp;{{ jogo.data }}</p>
-                </span>
-                <div class="info-blog">
-                    {{ jogo.local }} | {{ jogo.arbitragem }}
-                </div>
-                <div class="clear-noticias"></div>
-            </div>
-            {% endfor %}
-        </div><!-- .row -->
-    </div>
-</section>
-{% endblock %}
-
 {% block atletas %}{% endblock %}
