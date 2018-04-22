@@ -76,6 +76,7 @@
         <!-- Partida -->
         <div class="partida">
             <div class="container">
+              {% for jogo in jogos %}
               <div class="row">
                 <div class="col-md-3">
                     <img src="{% static 'images/logo-aldeota.png' %}" alt="" width="100px" height="100px"> X
@@ -83,16 +84,20 @@
                 </div>
                 <div class="col-md-3 jogo">               
                   <span>
-                    <b>Aldeota x Aldeota 2018</b>
+                    <b>Aldeota x {{ jogo.adversario }}</b>
                     <br />
                     <i class="fa fa-calendar"></i>&nbsp;
-                    05/05/2018
+                    {{ jogo.data }}
                     <br />
                     <i class="fa fa-map-marker"></i>&nbsp;
-                    Campo do Passaré
+                    {{ jogo.local }}
+                    <br />
+                    <i class="fa fa-gavel"></i>&nbsp;
+                    {{ jogo.arbitragem }}
                   </span>
                 </div>
               </div>
+              {% endfor %}
             </div>
         </div>
         <!-- Partida -->
@@ -129,13 +134,13 @@
 	  </section>
 	  {% endblock %}
   
-	  <!-- Elenco -->
-	  {% block elenco %}
+	  <!-- Atletas -->
+	  {% block atletas %}
       <section class="bg-light" id="portfolio">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h2 class="section-heading text-uppercase">Elenco</h2>
+              <h2 class="section-heading text-uppercase">Atletas</h2>
             </div>
           </div>
           <div class="row">

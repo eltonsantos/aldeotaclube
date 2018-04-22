@@ -19,7 +19,10 @@ from home import urls as home_urls
 from noticias import urls as noticias_urls
 from atletas import urls as atletas_urls
 from artilharia import urls as artilharia_urls
+from jogos import urls as jogos_urls
 from .views import sobre, contato
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include(home_urls)),
@@ -27,6 +30,7 @@ urlpatterns = [
     path('noticias/', include(noticias_urls)),
     path('atletas/', include(atletas_urls)),
     path('artilharia/', include(artilharia_urls)),
+    path('jogos/', include(jogos_urls)),
     path('contato/', contato, name='contato'),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

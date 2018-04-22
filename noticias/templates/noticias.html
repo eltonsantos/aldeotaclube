@@ -2,6 +2,70 @@
 
 {% block title %} Notícias - Aldeota Clube | Melhor time de futebol amador de Fortaleza/CE {% endblock %}
 
-{% block main %}{% endblock %}
+{% block partidas %}
+<header class="masthead">
+        <div class="container">
+          <div class="intro-text">
+            <div class="intro-lead-in">&nbsp;</div>
+            <div class="intro-heading text-uppercase">&nbsp;</div>
+            <br /><br />
+          </div>
+        </div>
 
-{% block elenco %}{% endblock %}
+        <!-- Partida -->
+        <div class="partida">
+            <div class="container">
+              {% for jogo in jogos %}
+              <div class="row">
+                <div class="col-md-3">
+                    <img src="" alt="" width="100px" height="100px"> X
+                    <img src="{{ jogo.escudo_adversario }}" alt="" width="100px" height="100px">
+                </div>
+                <div class="col-md-3 jogo">               
+                  <span>
+                    <b>Aldeota x {{ jogo.adversario }}</b>
+                    <br />
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    {{ jogo.data }}
+                    <br />
+                    <i class="fa fa-map-marker"></i>&nbsp;
+                    {{ jogo.local }}
+                    <br />
+                    <i class="fa fa-gavel"></i>&nbsp;
+                    {{ jogo.arbitragem }}
+                  </span>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+        </div>
+        <!-- Partida -->
+      </header>
+{% endblock %}
+
+{% block main %}
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-heading text-uppercase">Notícias</h2>
+            </div>
+            {% for noticia in noticias %}
+            <div class="info-noticia">
+                <span>
+                    <div class="info-title">
+                        {{ noticia.titulo }}</div><br />
+                    <p class="info-data"><i class="fa fa-calendar"></i>&nbsp;{{ noticia.data }}</p>
+                </span>
+                <div class="info-blog">
+                    {{ noticia.conteudo }}
+                </div>
+                <div class="clear-noticias"></div>
+            </div>
+            {% endfor %}
+        </div><!-- .row -->
+    </div>
+</section>
+{% endblock %}
+
+{% block atletas %}{% endblock %}

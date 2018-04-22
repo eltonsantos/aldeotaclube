@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from .models import Atletas
 
 def atletas(request):
-    return render(request, 'atletas.html')
+    atletas = Atletas.objects.all()
+    return render(request, 'atletas.html', {'atletas' : atletas})
