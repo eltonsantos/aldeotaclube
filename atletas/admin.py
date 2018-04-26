@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Atletas
+from .models import Atleta
 
-admin.site.register(Atletas)
+admin.site.register(Atleta)

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Jogos
+from .models import Jogo
 
 def jogos(request):
-    jogos = Jogos.objects.all()[:1]
+    jogos = Jogo.objects.all()[:1]
     return render(request, 'jogos.html', {'jogos' : jogos})

@@ -1,6 +1,6 @@
 from django.db import models
 
-class Noticias(models.Model):
+class Noticia(models.Model):
     titulo = models.CharField(max_length=200)
     data = models.DateField()
     conteudo = models.TextField()
@@ -8,3 +8,7 @@ class Noticias(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    class Meta:
+        verbose_name = "Notícia"
+        verbose_name_plural = "Notícias"

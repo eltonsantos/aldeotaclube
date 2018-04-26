@@ -1,6 +1,6 @@
 from django.db import models
 
-class Jogos(models.Model):
+class Jogo(models.Model):
     adversario = models.CharField(max_length=50)
     data = models.DateField()
     local = models.CharField(max_length=50)
@@ -9,3 +9,7 @@ class Jogos(models.Model):
 
     def __str__(self):
         return self.adversario
+
+    class Meta:
+        verbose_name = "Jogo"
+        verbose_name_plural = "Jogos"

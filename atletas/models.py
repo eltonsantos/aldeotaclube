@@ -1,6 +1,6 @@
 from django.db import models
 
-class Atletas(models.Model):
+class Atleta(models.Model):
     nome = models.CharField(max_length=50)
     sobrenome = models.CharField(max_length=50)
     idade = models.IntegerField()
