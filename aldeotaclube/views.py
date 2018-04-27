@@ -5,10 +5,10 @@ from jogos.models import Jogo
 from .forms import ContactForm
 
 def sobre(request):
-    jogos = Jogo.objects.all()[:1]
+    jogos = Jogo.objects.order_by('-data')[:1]
     return render(request, 'sobre.html', {'jogos' : jogos})
 
 def contato(request):
     form = ContactForm(request.POST)
-    jogos = Jogo.objects.all()[:1]
+    jogos = Jogo.objects.order_by('-data')[:1]
     return render(request, 'contato.html', {'form' : form, 'jogos' : jogos})

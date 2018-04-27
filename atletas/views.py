@@ -5,5 +5,5 @@ from jogos.models import Jogo
 
 def atletas(request):
     atletas = Atleta.objects.all()
-    jogos = Jogo.objects.all()[:1]
+    jogos = Jogo.objects.order_by('-data')[:1]
     return render(request, 'atletas.html', {'atletas' : atletas, 'jogos' : jogos})

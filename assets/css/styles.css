@@ -175,6 +175,7 @@ header.masthead {
   text-align: center;
   color: white;
   background-image: url("../images/3.jpg");
+  height: 450px;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -203,6 +204,11 @@ header.masthead .intro-text .intro-heading {
   line-height: 50px;
   margin-bottom: 25px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.partida {
+  text-align: center;
+  color: white;
 }
 
 @media (min-width: 768px) {
