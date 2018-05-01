@@ -3,6 +3,7 @@ from django.db import models
 class Atleta(models.Model):
     nome = models.CharField(max_length=50)
     sobrenome = models.CharField(max_length=50)
+    apelido = models.CharField(max_length=50)
     idade = models.IntegerField()
     data_nascimento = models.DateField()
     local_nascimento = models.CharField(max_length=50)

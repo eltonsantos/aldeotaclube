@@ -5,5 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="gestao_clientes" />
+    <orderEntry type="module" module-name="djangonautic" />
+    <orderEntry type="module" module-name="gestaoClientesOnline" />
   </component>
 </module>
