@@ -9,6 +9,7 @@ class Jogo(models.Model):
     placar_aldeota = models.IntegerField(null=True, blank=True)
     placar_adversario = models.IntegerField(null=True, blank=True)
     resumo = models.TextField(null=True, blank=True)
+    slug = models.SlugField(null=True, blank=True)
 
     def __str__(self):
         return self.adversario

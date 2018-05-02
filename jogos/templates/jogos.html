@@ -9,14 +9,16 @@
             <div class="col-lg-12">
                 <h2 class="section-heading text-uppercase">Jogos</h2>
             </div>
-            <ul>
-                {% for lista in lista_jogos %}
-                <div class="info-noticia">
-                    <li>Aldeota x {{ lista.adversario }}</li>
-                    <div class="clear-noticias"></div>
-                </div>
-                {% endfor %}
-            </ul>
+            {% for jogo in jogos %}
+            <div class="info-noticia">
+                <span>
+                    <div class="info-title">
+                        Aldeota x {{ jogo.adversario }}
+                    </div><br />
+                    <p class="info-data"><i class="fa fa-calendar"></i>&nbsp;{{ jogo.data }}</p>
+                </span>
+            </div>
+            {% endfor %}
         </div><!-- .row -->
     </div>
 </section>

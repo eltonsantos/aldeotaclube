@@ -46,7 +46,7 @@
                 <a class="nav-link js-scroll-trigger" href="{% url 'sobre' %}"><b>Sobre o time</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="{% url 'noticias' %}"><b>Notícias</b></a>
+                <a class="nav-link js-scroll-trigger" href="{% url 'noticias:noticias' %}"><b>Notícias</b></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="{% url 'atletas' %}"><b>Atletas</b></a>
@@ -119,9 +119,11 @@
           <div class="row text-center">
             {% for noticia in noticias %}
             <div class="col-md-4">
-              <img src="{{ noticia.imagem.url }}" alt="{{ noticia.imagem }}" width="300px" height="250px">
-              <h4 class="service-heading">{{ noticia.titulo }}</h4>
-              <p class="text-muted">{{ noticia.snippet }}</p>
+                <img src="{{ noticia.imagem.url }}" alt="{{ noticia.imagem }}" width="300px" height="250px">
+                <a href="{% url 'noticias:detalhes' slug=noticia.slug %}">
+                    <h4 class="service-heading">{{ noticia.titulo }}</h4>
+                </a>
+                <p class="text-muted">{{ noticia.snippet }}</p>
             </div>
             {% endfor %}
           </div>
@@ -146,30 +148,17 @@
                     
                   <div class="carousel-item active">
                     <div class="row">
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-breno.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-jogador.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-breno.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-jogador.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
+                    {% for atleta in atletas %}
+                        <div class="col-md-3">
+                            <a href="#" class="thumbnail">
+                                <img src="{{ atleta.imagem }}" alt="">
+                                {{ atleta.nome }}
+                            </a>
+                        </div>
+                    {% endfor %}
                     </div><!--.row-->
                   </div><!--.carousel-item-->
-                    
-                  <div class="carousel-item">
-                    <div class="row">
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-breno.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-jogador.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-breno.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-jogador.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                    </div><!--.row-->
-                  </div><!--.carousel-item-->
-                    
-                  <div class="carousel-item">
-                    <div class="row">
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-breno.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-jogador.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-breno.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                      <div class="col-md-3"><a href="#" class="thumbnail"><img src="{% static 'images/img-jogador.jpg' %}" alt="Image" style="max-width:100%;"></a></div>
-                    </div><!--.row-->
-                  </div><!--.carousel-item-->
+
                     
                 </div><!--.carousel-inner-->
 
@@ -238,5 +227,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
-    
 </body>

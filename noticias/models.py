@@ -5,12 +5,16 @@ class Noticia(models.Model):
     data = models.DateField()
     conteudo = models.TextField()
     imagem = models.ImageField(default='default.png', upload_to='noticias', null=True, blank=True)
+    slug = models.SlugField(null=True, blank=True)
 
     def __str__(self):
         return self.titulo
 
     def snippet(self):
         return self.conteudo[:50] + '...'
+
+    def snippet_noticia(self):
+        return self.conteudo[:150] + '...'
 
     class Meta:
         verbose_name = "Notícia"
