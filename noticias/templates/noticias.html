@@ -8,20 +8,24 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="section-heading text-uppercase">Notícias</h2>
-            </div>
-            {% for noticia in noticias %}
-            <div class="info-noticia">
-                <span>
-                    <div class="info-title">
-                        {{ noticia.titulo }}</div><br />
-                    <p class="info-data"><i class="fa fa-calendar"></i>&nbsp;{{ noticia.data }}</p>
-                </span>
-                <div class="info-blog">
-                    {{ noticia.snippet_noticia }}
+
+                {% for noticia in noticias %}
+                <div class="info-noticia">
+                    <span>
+                        <div class="info-title">
+                            <a href="{% url 'noticias:detalhes' slug=noticia.slug %}">{{ noticia.titulo }}</a>
+                        </div>
+                        <br />
+                        <p class="info-data"><i class="fa fa-calendar"></i>&nbsp;{{ noticia.data }}</p>
+                    </span>
+                    <div class="info-blog">
+                        {{ noticia.snippet_noticia }}
+                    </div>
+                    <div class="clear-noticias"></div>
                 </div>
-                <div class="clear-noticias"></div>
+                {% endfor %}
+
             </div>
-            {% endfor %}
         </div><!-- .row -->
     </div>
 </section>

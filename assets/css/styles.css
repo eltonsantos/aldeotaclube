@@ -812,3 +812,13 @@ background: #428bca;
 }
 
 /* END INTERNAS */
+
+#map { height: 480px; width:550px }
+
+.vertodos {
+    text-align: center;
+}
+
+.info-atleta {
+    margin: 10px;
+}

@@ -11,12 +11,16 @@
             </div>
             {% for atleta in atletas %}
             <div class="info-noticia">
-                <img src="{{ atleta.imagem }}" alt="{{ atleta.imagem }}">
-                <span>
-                    <div class="info-title">
-                        {{ atleta.nome }} {{ atleta.sobrenome }}
-                    </div><br />
-                </span>
+
+                <div class="info-atleta">
+                    <a href="{% url 'atletas:detalhes' slug=atleta.slug %}">
+                        <img src="{{ atleta.imagem.url }}" alt="{{ atleta.imagem }}">
+                        <p>{{ atleta.nome }}{{ atleta.sobrenome }}</p>
+                    </a>
+                </div>
+                <p class="info-data">{{ atleta.data }}</p>
+
+                <div class="clear-noticias"></div>
             </div>
             {% endfor %}
         </div><!-- .row -->

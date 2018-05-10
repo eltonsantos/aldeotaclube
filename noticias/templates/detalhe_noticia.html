@@ -10,7 +10,7 @@
                 <h2 class="section-heading text-uppercase">Notícias</h2>
             </div>
             <div class="info-noticia">
-                <img src="{{ noticia.imagem.url }}" alt="">
+                <img src="{{ noticia.imagem.url }}" alt="{{ noticia.imagem }}">
                 <span>
                     <div class="info-title">
                         {{ noticia.titulo }}</div><br />
@@ -24,3 +24,5 @@
     </div>
 </section>
 {% endblock %}
+
+{% block atletas %}{% endblock %}

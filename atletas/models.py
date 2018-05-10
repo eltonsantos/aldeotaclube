@@ -9,7 +9,7 @@ class Atleta(models.Model):
     local_nascimento = models.CharField(max_length=50)
     descricao = models.TextField()
     imagem = models.ImageField(upload_to='atletas', null=True, blank=True)
-    slug = models.SlugField(null=True, blank=True)
+    slug = models.SlugField()
 
     def __str__(self):
         return self.nome + " " + self.sobrenome
