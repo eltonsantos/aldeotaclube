@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da46a0e0-4282-48ef-92d1-84e2e0506b9c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/jogos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/jogos/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/noticias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/noticias/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +52,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jogos/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="130" column="35" lean-forward="true" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -110,7 +118,6 @@
         <option value="$PROJECT_DIR$/atletas/views.py" />
         <option value="$PROJECT_DIR$/atletas/urls.py" />
         <option value="$PROJECT_DIR$/atletas/models.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/noticias/templates/detalhe_noticia.html" />
         <option value="$PROJECT_DIR$/atletas/templates/detalhe_atleta.html" />
         <option value="$PROJECT_DIR$/atletas/templates/atletas.html" />
@@ -120,6 +127,7 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/noticias/models.py" />
         <option value="$PROJECT_DIR$/jogos/models.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -158,12 +166,7 @@
             <path>
               <item name="aldeotaclube" type="b2602c69:ProjectViewProjectNode" />
               <item name="aldeotaclube" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aldeotaclube" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aldeotaclube" type="462c0819:PsiDirectoryNode" />
-              <item name="noticias" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -189,6 +192,7 @@
       <recent name="$PROJECT_DIR$/../djangonautic" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media/comuns" />
       <recent name="$PROJECT_DIR$/assets/images" />
     </key>
   </component>
@@ -291,14 +295,14 @@
     <frame x="0" y="23" width="1440" height="802" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.16842847" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.16842847" />
       <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.4989429" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49682876" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4982382" weight="0.32956153" />
       <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.48766738" weight="0.32956153" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.24947146" />
-      <window_info anchor="bottom" x="10" y="315" width="1430" height="217" id="Terminal" order="9" sideWeight="0.5017618" side_tool="true" visible="true" weight="0.39745402" />
+      <window_info active="true" anchor="bottom" x="10" y="315" width="1430" height="217" id="Terminal" order="9" sideWeight="0.5017618" side_tool="true" visible="true" weight="0.39745402" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.5021097" side_tool="true" weight="0.24947146" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -586,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="170" column="61" selection-start-line="170" selection-start-column="61" selection-end-line="170" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/noticias/templates/detalhe_noticia.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -698,6 +695,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="130" column="35" lean-forward="true" selection-start-line="130" selection-start-column="35" selection-end-line="130" selection-end-column="35" />
         </state>
       </provider>
     </entry>
