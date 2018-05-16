@@ -4,7 +4,7 @@ class Noticia(models.Model):
     titulo = models.CharField(max_length=200)
     data = models.DateField()
     conteudo = models.TextField()
-    imagem = models.ImageField(default='default.png', upload_to='noticias', null=True, blank=True)
+    imagem = models.ImageField(default='comuns/default.jpg', upload_to='noticias', null=True, blank=True)
     slug = models.SlugField()
 
     def __str__(self):
