@@ -131,6 +131,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = 'media'
 
+STATICFILES_STORAGE = 'aldeotaclube.s3util.StaticStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
